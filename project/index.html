@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitive Programming Tracker</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Competitive Programming Tracker</h1>
+    </header>
+
+    <section class="container">
+        <div class="form-container">
+            <h2>Add / Edit Problem</h2>
+            <form id="problemForm">
+                <input type="hidden" id="editIndex"> 
+
+                <label for="problemName">Problem Name:</label>
+                <input type="text" id="problemName" required>
+                
+                <label for="platform">Platform:</label>
+                <input type="text" id="platform" required>
+                
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+                
+                <label for="category">Category:</label>
+                <input type="text" id="category" required>
+                
+                <label for="date">Date Solved:</label>
+                <input type="date" id="date" required>
+                
+                <label for="timeTaken">Time Taken (in minutes):</label>
+                <input type="number" id="timeTaken" required>
+
+                <label for="solutionCode">Solution Code:</label>
+                <textarea id="solutionCode" rows="5" placeholder="Paste your solution here..."></textarea>
+                
+                <button type="submit">Save Problem</button>
+            </form>
+        </div>
+        
+        <div class="tracker-container">
+            <h2>Your Progress</h2>
+            <table id="problemTable">
+                <thead>
+                    <tr>
+                        <th>Problem Name</th>
+                        <th>Platform</th>
+                        <th>Difficulty</th>
+                        <th>Category</th>
+                        <th>Date Solved</th>
+                        <th>Time Taken</th>
+                        <th>Solution</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="chart-container">
+        <h2>Difficulty Breakdown</h2>
+        <canvas id="progressChart"></canvas>
+    </section>
+
+    <footer>
+        <p>Competitive Programming Tracker by Your Name</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
